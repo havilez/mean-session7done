@@ -1,0 +1,47 @@
+<div>
+	<input type="text" placeholder="Search..." ng-model="searchFor" size="20" style="display:block; margin:20px" />
+	<div class="panel panel-primary" ng-repeat="portfolio in portfolios  | filter: { title: searchFor } ">
+
+
+		<div class="panel-heading">
+			<a href="index.html#/portfolio/{{ portfolio.name }}">
+				{{ portfolio.title }} 
+			</a>
+			<div class="date">{{ portfolio.date }}</div>
+		</div>
+
+
+		<div class="panel-body">
+			{{ portfolio.description }}
+		</div>
+	</div>
+
+	<div class="cl">
+		<h3>Add a Portfolio</h3>
+		<div class="panel panel-default">
+			<div class="alert alert-danger" ng-show="add_portfolio_error">
+				{{add_portfolio_error}}
+			</div>
+			<form name="add_portfolio_form" novalidate>
+				<div class="panel-heading">
+					<input type="text" placeholder="title" size="20" ng-model="adding_portfolio.title" />
+					<div style="float:right">
+						<input 
+						type="text" 
+						placeholder="yyyy/mm/dd" 
+						size="10" 
+						ng-model="adding_portfolio.date" />
+					</div>
+				</div>
+				<div class="panel-body">
+					<textarea placeholder="description" rows="4" ng-model="adding_portfolio.description" ></textarea>
+					<input type="text" placeholder="name" size="10" ng-model="adding_portfolio.name" />
+					<input type="text" placeholder="image url" size="20" ng-model="adding_portfolio.imageurl" />
+				</div>
+				<button ng-click="addPortfolio(adding_portfolio)" class="btn btn-success">Add Portfolio</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+<p class="cl">There are {{ portfolios.length }} portfolios available.</p>
