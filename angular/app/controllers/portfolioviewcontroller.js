@@ -3,7 +3,9 @@ function PortfolioViewController($scope, $routeParams){
 	$scope.load_error_text = "";
 
 	$scope.portfolio_name = $routeParams.portfolio_name;
+	$scope.pageClass = "page-about";
 
+// Does this simulate data retrieved from backend server?????
 	var portfolios = { 
 		"vessel1309": [
 		{ filename: "vessel1309-001.jpg",

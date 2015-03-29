@@ -1,4 +1,4 @@
-var portfolioApp = angular.module("portfolioSharingApp", ["ngRoute"]);
+var portfolioApp = angular.module("portfolioSharingApp", ['ngRoute','ngAnimate']);
 
 portfolioApp.config(function($routeProvider){
 	$routeProvider

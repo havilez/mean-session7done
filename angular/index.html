@@ -3,8 +3,12 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+
 	<script type="text/javascript" src="js/angular.min.1.2.10.js"></script>
 	<script type="text/javascript" src="js/angular-route.js"></script>
+	 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-animate.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
@@ -13,7 +17,7 @@
 	<script type="text/javascript" src="app/controllers/portfolioviewcontroller.js"></script>
 </head>
 <body>
-	<ng-view></ng-view>
+	 <div class="page {{ pageClass }}" ng-view></div>
 </body>
 </html>
 
