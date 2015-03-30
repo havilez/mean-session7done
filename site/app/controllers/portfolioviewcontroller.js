@@ -6,7 +6,7 @@ function PortfolioViewController($scope, $routeParams){
 //	$scope.pageClass = "page-about";
 
 // Does this simulate data retrieved from backend server?????
-/** 
+
 	var portfolios = { 
 		"vessel1309": [
 		{ filename: "vessel1309-001.jpg",
@@ -34,7 +34,7 @@ function PortfolioViewController($scope, $routeParams){
 		description: "FTW!!!11!one!1" }
 		]
 	};
-	**/
+	
 
 	if( portfolios[$scope.portfolio_name]){
 		$scope.portfolios = portfolios[$scope.portfolio_name];

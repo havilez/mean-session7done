@@ -35,3 +35,8 @@
       </div>
     </figure>
   </article>
+
+  ///////////////////////////////////
+
+  <a href="#" class="current-menu-item">Call of Booty</a>
+  <p><a href="#/">/main page</a></p>

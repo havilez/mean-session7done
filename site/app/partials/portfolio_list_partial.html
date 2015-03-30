@@ -1,5 +1,38 @@
 <div class="content">
 
+<div class="article-form-container">
+    <div class="panel panel-default">
+      <h3>Add a Portfolio</h3>
+      <form name="add_portfolio_form" ng-submit="addPortfolio(adding_portfolio)">
+        <div class="panel-heading">
+          <input class="title" type="text" required placeholder="title" size="30" ng-model="adding_portfolio.title" />
+          <input class="date" type="text" required placeholder="yyyy/mm/dd" size="10" ng-model="adding_portfolio.date" ng-minlength="10" />
+        </div>
+        <div class="panel-body">
+          <textarea required placeholder="description" rows="2" cols="30" ng-model="adding_portfolio.description"></textarea>
+          <!-- <input class="title" type="text" required placeholder="image url" size="30" ng-model="adding_portfolio.imageurl" /> -->
+          <!-- input class="title" type="text" required placeholder="filename" size="30" ng-model="adding_portfolio.filename" />  -->
+          
+          <!-- div ng-init="adding_portfolio.imageurl = 'images/drunkenPirate_thumb1.png'">
+           
+
+            <select class="form-control" required ng-model="adding_portfolio.imageurl">
+              <option value="images/drunkenPirate_thumb1.png">images/drunkenPirate_thumb1.png</option>
+              <option value="images/drunkenPirate_thumb2.png">images/drunkenPirate_thumb2.png</option>
+              <option value="images/drunkenPirate_thumb3.png">images/drunkenPirate_thumb3.png</option>
+            </select>
+          </div> -->
+
+          <select
+  ng-model="selectedItemExact"
+  ng-options=" portfolio.name for portfolio in portfolios"  width="30">
+</select>
+          <input class="btn btn-success" type="submit" value="Add Portfolio" />
+        </div>
+      </form>
+    </div>
+  </div>
+
   <article class="portfolio-item group" ng-repeat="portfolio in portfolios | filter: { title: searchFor }">
     <header class="portfolio-info">
       <div class="title">{{portfolio.title}}</div>
@@ -9,7 +42,7 @@
       </div>
     </header>
     <figure class="portfolio-image">
-      <img ng-src="images/media/{{portfolio.name}}/thumb/{{portfolio.filename}}" />
+      <img ng-src="images/media/{{portfolio.name}}/thumb/{{portfolio.filename}}" alt="{{ portfolio.title }}"/>
     </figure>
   </article>
 
