@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="portfolioSharingApp">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0">
 
   <title>Drunken Pirate Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
+
   <script src="js/modernizr.js"></script>
+
+  <script type="text/javascript" src="js/angular.min.1.2.10.js"></script>
+  <script type="text/javascript" src="js/angular-route.js"></script>
+
+  <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="app/app.js"></script>
+
+  <script type="text/javascript" src="app/controllers/portfoliolistcontroller.js"></script>
 </head>
 <body>
   <main class="wrap group">
@@ -54,62 +66,13 @@
   </nav>
 </aside>
 
+<div ng-view>
 
-
-<div class="content">
-
-  <article class="portfolio-item group first">
-    <header class="portfolio-info">
-      <div class="title">Call of Booty</div>
-      <div class="date">7 Nov 2013</div>
-      <div class="description">
-        Arrrgh mateys! This be the finest vessel sailing these seas that yer eyes ever laid sight on. Arrrgh.
-      </div>
-    </header>
-    <figure class="portfolio-image">
-      <img src="images/drunkenPirate_thumb3.png" alt="Pirate Ship">
-    </figure>
-  </article>
-
-  <article class="portfolio-item group">
-    <header class="portfolio-info">
-      <div class="title">The Sack of the Innocents</div>
-      <div class="date">7 Nov 2013</div>
-      <div class="description">
-        This be a detail of the sacking of the innocents where I played an important role as business analyst and in implementation.
-      </div>
-    </header>
-    <figure class="portfolio-image">
-      <img src="images/drunkenPirate_thumb2.png" alt="Sack of the Innocents">
-    </figure>
-  </article>
-
-  <article class="portfolio-item group">
-    <header class="portfolio-info">
-      <div class="title">Pipe and First Mate</div>
-      <div class="date">7 Nov 2013</div>
-      <div class="description">
-        After a hard day of lootin' and shootin' I like to relax with my best mates and tally up the days booty.
-      </div>
-    </header>
-    <figure class="portfolio-image">
-      <img src="images/drunkenPirate_thumb1.png" alt="Pipe and Mate">
-    </figure>
-  </article>
-
-  <article class="portfolio-item group loading-wrap" style="display:none">
-    <header class="portfolio-info">
-    </header>
-    <figure class="portfolio-image">
-      <div class="loading">
-        <img src="images/loading.png" alt="Loading" class="rotate">&nbsp;Loading...
-      </div>
-    </figure>
-  </article>
 
 </div>
+
+
 </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script src="app/app.js"></script>
+
 </body>
 </html>

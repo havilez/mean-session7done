@@ -1,0 +1,18 @@
+<div class="content">
+
+  <article class="portfolio-item group" ng-repeat="portfolio in portfolios">
+    <header class="portfolio-info">
+      <div class="title">{{portfolio.title}}</div>
+      <div class="date">{{portfolio.date}}</div>
+      <div class="description">
+        {{portfolio.description}}
+      </div>
+    </header>
+    <figure class="portfolio-image">
+      <img ng-src="images/media/{{portfolio.name}}/thumb/{{portfolio.filename}}" />
+    </figure>
+  </article>
+
+  
+
+</div>
