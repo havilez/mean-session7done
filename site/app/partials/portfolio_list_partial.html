@@ -1,6 +1,6 @@
 <div class="content">
 
-  <article class="portfolio-item group" ng-repeat="portfolio in portfolios">
+  <article class="portfolio-item group" ng-repeat="portfolio in portfolios | filter: { title: searchFor }">
     <header class="portfolio-info">
       <div class="title">{{portfolio.title}}</div>
       <div class="date">{{portfolio.date}}</div>
