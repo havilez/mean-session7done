@@ -29,12 +29,6 @@ function PortfolioListController( $scope ){
 		{
 			$scope.add_portfolio_error = "Missing description";
 		}
-		/**
-		else if (!new_portfolio.name)
-		{
-			$scope.add_portfolio_error = "Missing name - six characters";
-		}
-		**/
 		else {
 			new_portfolio.name = $scope.selectedItemExact.name;
 			new_portfolio.filename = $scope.selectedItemExact.filename;
